@@ -2,12 +2,6 @@
   <div class="panel-group" id="accordion">
     <div class="panel">
       <div class="panel-heading background-3"><span style="cursor:pointer;" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><i class="glyphicon glyphicon-collapse-up"></i>Edit Section</span> 
-        <!-- <span class="pull-right" style="cursor:pointer">
-          <div class="ctooltip">
-            <i class="glyphicon glyphicon-remove"></i>
-            <span class="ctooltiptext">Close</span>
-          </div>
-        </span> -->
       </div>
       
       <div id="collapse1" class="panel-collapse collapse">
@@ -45,9 +39,7 @@
               <tr>
                 <th>Goal
                   <span class="search">
-                    <!-- <form [formGroup]="searchForm" (submit)="onSearch()"> -->
                     <input type="text" name="search" (keyup)="searchGoal($event)" placeholder="Search..">
-                    <!-- <button type="submit" [disabled]="searchForm.invalid" class="btn glyphicon glyphicon-filter"></button> -->
                     <!-- </form> -->
                   </span>
                 </th>
@@ -56,7 +48,6 @@
               </tr>
             </thead>
             <tbody class="body-background">
-              <!-- <tr><td colspan="3"></td></tr> -->
               <tr *ngFor="let goal of goals;let i = index;">
                 <td style="vertical-align: middle;">{{goal.objective}}</td>
                 <td style="vertical-align: middle;"><i class="glyphicon glyphicon-edit" style="cursor:pointer;"(click)="updateGoal(goal)" data-parent="#accordion" data-toggle="collapse" href="#collapse1"></i></td>
